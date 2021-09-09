@@ -52,9 +52,9 @@
             </li>
             <li><a href="tasks.html">Task Descriptions</a>
               <ul class="dropdown">
-                <li><a href="tasks.html#task1">Task 1</a></li>
-                <li><a href="tasks.html#task2">Task 2</a></li>
-                <li><a href="tasks.html#task3">Task 3</a></li>
+                <li><a href="tasks.html#task1">Word Segmentation</a></li>
+                <li><a href="tasks.html#task2">Morphological Parsing</a></li>
+                <li><a href="tasks.html#task3">Combined Word Segmentation & Morphological Parsing</a></li>
               </ul>
             </li>
             <li><a href="dataset.html">Datasets</a></li>
@@ -87,10 +87,12 @@
 <div class="post-details">
               <blockquote>
               <ul class="a">
-                  <li> (a) The original sentences from DCS (at least 100,000) </li> <br>
+                  <li> (a) Joint Sentences: 90,000 for training and 10,000 for development </li> <br>
                   <li> (b) The ground truth segmentation for each of the sentences in (a). </li> <br>
-                  <li> (c) The sequence of morphological tags of each of the words for every sentence of (a). </li> <br>
-                  <li> (d) Additionally, an auxiliary file (in .graphml format) will be provided for all the sentences of (a). Each of these files possesses a graph made up of all the possible segments of the sentence as its nodes with the morphological tags as its attributes. The edges denote the compatibility of two segments to be present in a single segmentation. The ground truth segmentation is also encoded in this graph. </li> <br><br>
+                  <li> (c) The ground truth morphological analysis (stem and morphological category) for each of the sentences. </li> <br>
+                  <li> (d) The ground truth segmentation and morphological analysis (segmented word, stem and morphological category) for each of the sentences. </li> <br>
+                  <li> (e) Additionally, an auxiliary file (in .graphml format) will be provided for all the sentences of (a). Each of these files possesses a graph made up of all the possible segments of the sentence as its nodes with the morphological tags as its attributes. The edges denote the compatibility of two segments to be present in a single segmentation. The ground truth segmentation is also encoded in this graph. </li> <br><br>
+                  <li> *** - Instructions with relevant code snippets will be available soon  </li> <br>
                   <li> *** - The links for Dataset will be updated soon
               </ul>
               </blockquote>
@@ -132,9 +134,9 @@
       <div class="col-sm-15">
         <div class="contact_info"> <!--<i class="ion-map"></i>-->
           <p> <br>
-            Sriram Krishnan - sriramk8@gmail.com <br>
-            Dr. Amrith Krishna - ak2329@cam.ac.uk <br>
-            Prof. Pawan Goyal - pawang@cse.iitkgp.ac.in
+            Sriram Krishnan - sriramk8<!---->@<!-- -->gmail<!-- -->.com <br>
+            Amrith Krishna - ak2329<!---->@<!-- -->cam.ac<!-- -->.uk <br>
+            Pawan Goyal - pawang<!-- -->@<!-- -->cse<!-- -->.iitkgp<!-- -->.ac<!-- -->.in
           </p>
         </div>
       </div>
