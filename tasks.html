@@ -86,24 +86,40 @@
 <!-- Post -->
             <div class="blog-in"> 
               <!-- Post Detail --> 
-              <span> <a class="h4"><strong>Task 1</strong> </a> </span> <a class="h1"> <strong>Word Segmentation for Sanskrit</strong> </a>
+<!--              <span> <a class="h7"><strong>Task 1</strong> </a> </span> <a class="h8"> <strong>Word Segmentation for Sanskrit</strong> </a>-->
+              <span> <h8><strong>Task 1</strong> </h8> </span> <h7> <strong>Word Segmentation for Sanskrit</strong> </h7>
 
 <div class="post-details">
               
-              <p> Most of the Sanskrit texts found in ancient manuscripts are known to have been written in the sandhied/joint form. So Word Segmentation forms the preliminary task of Sentential analysis. Word segmentation is the task of identifying the words in a given character sequence (sentence). It is challenging in a language like Sanskrit, where the word boundaries are often obscured due to <strong><em>Sandhi</em></strong>. <br><br>
+              <p1> Most of the Sanskrit texts found in ancient manuscripts are known to have been written in the sandhied/joint form. So Word Segmentation forms the preliminary task of Sentential analysis. Word segmentation is the task of identifying the words in a given character sequence (sentence). It is challenging in a language like Sanskrit, where the word boundaries are often obscured due to <strong><em>Sandhi</em></strong>. <br><br>
 
-For instance, the sentence <strong><em>r&amacr;mah&#803; vanam gacchati</em></strong> when sandhied, results into <strong><em>r&amacr;movanan&#729;gacchati</em></strong>. We see that three individual words combine in their boundaries to form a single word. Resolving this is necessary to obtain the individual segments which will be put into analyses in further tasks of sentential analysis (morphological parsing, dependency parsing, semantic analysis, etc.). <br><br>
+For instance, the sentence <strong><em>r&amacr;mah&#803; vanam gacchati</em></strong> when sandhied, results into <strong><em>r&amacr;movana&#7749;gacchati</em></strong>. We see that three individual words combine in their boundaries to form a single word. Resolving this is necessary to obtain the individual segments which will be put into analyses in further tasks of sentential analysis (morphological parsing, dependency parsing, semantic analysis, etc.). <br><br>
 
-There is another kind of <strong><em>Sandhi</em></strong> found between components of compounds where two or more stems join to form a compound word. For instance, <strong><em>r&amacr;m&amacr;layah&#803;</em></strong> is a compound word formed from the components <strong><em>r&amacr;ma</em></strong> and </strong><em>&amacr;layah&#803;</em></strong>. Resolving <strong><em>Sandhi</em></strong> within compounds is essential as the knowledge of the individual components of a compound will also help in its analysis in the downstream tasks \cite{krishna-etal-2020-graph}. And Sanskrit being rich in multicomponent compound constructions, the analysis of the sentence would majorly require the analysis of the individual components of the compounds present in the sentence. <br><br>
+There is another kind of <strong><em>Sandhi</em></strong> found between components of compounds where two or more stems join to form a compound word. For instance, <strong><em>r&amacr;m&amacr;layah&#803;</em></strong> is a compound word formed from the components <strong><em>r&amacr;ma</em></strong> and <strong><em>&amacr;layah&#803;</em></strong>. Resolving <strong><em>Sandhi</em></strong> within compounds is essential as the knowledge of the individual components of a compound will also help in its analysis in the downstream tasks <cite>[Krishna et al., 2021]</cite>. And Sanskrit being rich in multicomponent compound constructions, the analysis of the sentence would majorly require the analysis of the individual components of the compounds present in the sentence. <br><br>
 
-Another major challenge for this task owes to the number of segmentations possible for a given sentence, allowing non-determinism right at the start of the linguistic analysis \cite{huet-seg09}. According to the <a href="https://sanskrit.inria.fr/DICO/reader.fr.html">Sanskrit Heritage Reader(SHR)</a>, there are 4 possible segmentations for the sequence <strong><em>r&amacr;movanan&dot;gacchati</em></strong>, and the two-component compound <strong><em>r&amacr;m&amacr;layah&#803;</em></strong> has 20 possible segmentations. This is mainly due to the non-deterministic combinations of the phonemes and additionally due to the multiple morphological analyses for a given word. <br><br>
+Another major challenge for this task owes to the number of segmentations possible for a given sentence, allowing non-determinism right at the start of the linguistic analysis. According to the <a href="https://sanskrit.inria.fr/DICO/reader.fr.html">Sanskrit Heritage Reader(SHR)</a>, there are 4 possible segmentations for the sequence <strong><em>r&amacr;movana&#7749;gacchati</em></strong>, and the two-component compound <strong><em>r&amacr;m&amacr;layah&#803;</em></strong> has 20 possible segmentations. This is mainly due to the non-deterministic combinations of the phonemes and additionally due to the multiple morphological analyses for a given word. <br><br>
 
-Thus, the requirement of this task is to predict the correct segmentation of the given sequence. The participants will be provided with the unsegmented sentences (at least 100,000) along with their corresponding ground truth segmentation. The sentences have been taken from the <a href="http://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit(DCS)</a>. </p>
+Thus, the requirement of this task is to predict the correct segmentation of the given sequence. The participants will be provided with the unsegmented sentences (at least 100,000) along with their corresponding ground truth segmentation. The sentences have been taken from the <a href="http://www.sanskrit-linguistics.org/dcs/">Digital Corpus of Sanskrit(DCS)</a>.<br> </p1>
               <blockquote>
+              <h8><strong>Related Literature:<br></strong></h8>
               <ul class="a">
-                  <li> <a href="https://aclanthology.org/D18-1295/">Sanskrit Word Segmentation Using Character-level Recurrent and Convolutional Neural Networks</a> proposes end-to-end neural network models for tokenization and segmentation of given texts, outperforming the then state of the art proposals </li> <br>
-                  <li> <a href="https://aclanthology.org/C16-1048/">Word Segmentation in Sanskrit using Path Constrained Random Walks</a> treats Word Segmentation as a query expansion problem and uses the PCRW framework to predict the correct segments </li> <br>
-                  <li> <a href="https://aclanthology.org/L18-1264/">Building a Word Segmenter for Sanskrit Overnight</a> uses a deep seq2seq model that takes the sandhied string as input and predicts the unsandhied string. </li> <br>
+<!--                  <li>-->
+<!--                     <p> -->
+<!--                        <a href="https://aclanthology.org/D18-1295/">Sanskrit Word Segmentation Using Character-level Recurrent and Convolutional Neural Networks</a> proposes end-to-end neural network models for tokenization and segmentation of given texts, outperforming the then state of the art proposals -->
+<!--                     </p>-->
+<!--                  </li> <br>-->
+<!--                  <li> <a href="https://aclanthology.org/C16-1048/">Word Segmentation in Sanskrit using Path Constrained Random Walks</a> treats Word Segmentation as a query expansion problem and uses the PCRW framework to predict the correct segments </li> <br>-->
+<!--                  <li> <a href="https://aclanthology.org/L18-1264/">Building a Word Segmenter for Sanskrit Overnight</a> uses a deep seq2seq model that takes the sandhied string as input and predicts the unsandhied string. </li> <br>-->
+<!--                  <li> <a href="https://sanskrit.inria.fr/DICO/reader.fr.html">SHR</a> is a lexicon driven shallow parser that encodes all the rules of <strong><em>Sandhi</em></strong> as per traditional Sanskrit grammar and which can enumerate exhaustively all possible lexically valid segmentations for a given sequence</li> <br>-->
+<!--                  <li> <a href="http://www.sanskrit-linguistics.org/dcs/">DCS</a> is an annotated corpus having more than 650,000 sentences.</li> <br>-->
+
+                  <li> Krishna, A., Santra, B., Gupta, A., Satuluri, P., & Goyal, P. (2021). A Graph-Based Framework for Structured Prediction Tasks in Sanskrit. Computational Linguistics, 46(4), 785–845. <a href="https://doi.org/10.1162/coli_a_00390">https://doi.org/10.1162/coli_a_00390</a> </li> <br>
+                  <li> Krishna, A., Santra, B., Satuluri, P., Bandaru S, P., Faldu B., Singh, Yajuvendra., & Goyal, P. (2016). Word Segmentation in Sanskrit using Path Constrained Random Walks. The COLING 2016 Organizing Committee, 46(4), 494–504. <a href="https://aclanthology.org/C16-1048">https://aclanthology.org/C16-1048</a> </li>  <br>
+                  <li> Reddy, Vikas.,Krishna, A., Santra, B., Gupta, P., Satuluri, P., Vineeth, M, R., Sharma, V., & Goyal, P. (2018). Building a Word Segmenter for Sanskrit Overnight. European Language Resources Association (ELRA). <a href="https://aclanthology.org/L18-1264">https://aclanthology.org/L18-1264</a> </li> <br>
+                  
+<!--                  <li> <a href="https://aclanthology.org/D18-1295/"><cite>[Sanskrit Word Segmentation Using Character-level Recurrent and Convolutional Neural Networks]</cite></a> proposes end-to-end neural network models for tokenization and segmentation of given texts, outperforming the then state of the art proposals </li> <br>-->
+<!--                  <li> <a href="https://aclanthology.org/C16-1048/">Word Segmentation in Sanskrit using Path Constrained Random Walks</a> treats Word Segmentation as a query expansion problem and uses the PCRW framework to predict the correct segments </li> <br>-->
+<!--                  <li> <a href="https://aclanthology.org/L18-1264/">Building a Word Segmenter for Sanskrit Overnight</a> uses a deep seq2seq model that takes the sandhied string as input and predicts the unsandhied string. </li> <br>-->
                   <li> <a href="https://sanskrit.inria.fr/DICO/reader.fr.html">SHR</a> is a lexicon driven shallow parser that encodes all the rules of <strong><em>Sandhi</em></strong> as per traditional Sanskrit grammar and which can enumerate exhaustively all possible lexically valid segmentations for a given sequence</li> <br>
                   <li> <a href="http://www.sanskrit-linguistics.org/dcs/">DCS</a> is an annotated corpus having more than 650,000 sentences.</li> <br>
               </ul>
@@ -125,34 +141,39 @@ Thus, the requirement of this task is to predict the correct segmentation of the
 <!-- Post -->
             <div class="blog-in"> 
               <!-- Post Detail --> 
-              <span> <a class="h4"><strong>Task 2</strong> </a> </span> <a class="h1"> <strong>Morphological Parsing for Sanskrit</strong> </a>
+              <span> <h8><strong>Task 2</strong> </h8> </span> <h7> <strong>Morphological Parsing for Sanskrit</strong> </h7>
 
 <div class="post-details">
               
-              <p> Morphological parsing is the task of identifying the morphemes constituting the words in a sentence. Sanskrit, a morphologically-rich and a free word order language, poses a series of challenges for sentential analysis. Its morphological richness brings ambiguity into the picture and results in multiple analysis for a particular word form. <br><br>
+              <p1> Morphological parsing is the task of identifying the morphemes constituting the words in a sentence. Sanskrit, a morphologically-rich and a free word order language, poses a series of challenges for sentential analysis. Its morphological richness brings ambiguity into the picture and results in multiple analysis for a particular word form. <br><br>
 
 Since there is limited restriction in the movement of words within a sentence, the positional information does not help in sentential analyses. The prose texts mostly follow a common canonical order. But for verses, the word order is shuffled to fit poetic meters. A large number of texts are written in verses or to complicate things further, they are written as a combination of prose and verse. And it is required for us to look into other features to obtain important information regarding the role played by each of the words in the sentence. The words encode within themselves the grammatical role played by them in the sentence. The grammatical categories in a morphological class are indicative of the syntactic roles and the morphological agreement between the words in a construction. With the help of the morphological markers present mostly as affixes in the words, we can arrive at the possible morphological analyses of the words. <br><br>
 
-This task focuses on obtaining the correct stem and the morphological tag of the inflected forms in a sentence. Given a sentence of individual words, each word should be annotated with the following parameters: <br>
+This task focuses on obtaining the correct stem and the morphological tag of the inflected forms in a sentence. Given a sentence of segmented words, each word should be annotated with the following parameters: <br>
 
-a. word form<br>
-b. base stem<br>
-c. derived stem<br>
-d. base morphological analysis (or CNG)<br>
-e. derived morphological analysis (or derived CNG)<br>
-f. preverb <br>
+a. stem
+b. morphological tag (this is a list of tags proposed by the Sanskrit Heritage Reader, and the comparison with other available tags along with denotations of each tag is available<a href="https://sanskritlibrary.org/helpmorphids.html"> here.</a>
 
-CNG is the morphological code corresponding to the morphological analysis of the word. It is calculated according to the case, number and gender for the nouns, and tense, aspect, person, number, and class for the verbs. <br><br>
+<!--a. word form<br>-->
+<!--b. base stem<br>-->
+<!--c. derived stem<br>-->
+<!--d. base morphological analysis (or CNG)<br>-->
+<!--e. derived morphological analysis (or derived CNG)<br>-->
+<!--f. preverb <br>-->
+
+<!--CNG is the morphological code corresponding to the morphological analysis of the word. It is calculated according to the case, number and gender for the nouns, and tense, aspect, person, number, and class for the verbs. <br><br>-->
 
 Morphological parsing in Sanskrit is challenging primarily because of two factors. First, Sanskrit has a rich tagset of about 1,635 possible tags. Second, an inflected form in Sanskrit may lead to multiple morphological analyzes, due to syncretism and homonymy. Sanskrit is a fusional language where a morpheme encodes multiple grammatical categories. The same word-form or stem could denote multiple senses or meanings, and this is termed as homonymy. This poses ambiguity at the level of semantics. Sanskrit also has syncretism where the same word form could denote different morphological categories of the same stem. Handling these two is challenging as the analysis has to be done from the level of semantics and also taking the context into consideration. <br><br>
 
-The requirement of this task is to predict the stems and morphological tags given the segmented words. The participants will be provided with the morphological tags for each of the sentences as training data. The tags provided are: Word form, stem, base stem, cng, base cng, and preverbs. <br>
- </p>
+The requirement of this task is to predict the stems and morphological tags given the segmented words. The participants will be provided with the morphological tags for each of the sentences as training data. <br>
+ </p1>
               <blockquote>
+              <h8><strong>Related Literature:<br></strong></h8>
+              <br>
               <ul class="a">
-                  <li> <a href="https://aclanthology.org/2020.sigmorphon-1.23/">Evaluating Neural Morphological Taggers for Sanskrit</a> </li> <br>
-                  <li> <a href="https://arxiv.org/abs/1809.01446">Free as in Free Word Order: An Energy Based Model for Word Segmentation and Morphological Tagging in Sanskrit</a> proposes a structured prediction framework that does segmentation as well as morphological tagging, outperforming the then state of the art models. </li> <br>
-                  <li> <a href="https://aclanthology.org/W16-3715/">Improving the Morphological Analysis of Classical Sanskrit</a> </li> <br>
+                  <li> Krishna, A., Gupta, A., Helwwig, O., & Goyal, P. (2020). Evaluating Neural Morphological Taggers for Sanskrit. Association for Computational Linguistics, 198–203. <a href="https://aclanthology.org/2020.sigmorphon-1.23/">https://aclanthology.org/2020.sigmorphon-1.23/</a> </li> <br>
+                  <li> Krishna, A., Santra, B., Satuluri, P., Bandaru S, P., Faldu B., Singh, Yajuvendra., & Goyal, P. (2018). Free as in Free Word Order: An Energy Based Model for Word Segmentation and Morphological Tagging in Sanskrit. Association for Computational Linguistics, 2550–2561. <a href="https://aclanthology.org/D18-1276/">https://aclanthology.org/D18-1276/</a> </li>  <br>
+                  <li> Hellwig, Oliver (2016). Improving the Morphological Analysis of Classical Sanskrit. The COLING 2016 Organizing Committee. 142–151. <a href="https://aclanthology.org/W16-3715/">https://aclanthology.org/W16-3715/</a> </li> <br>
               </ul>
               </blockquote>
               </div>
@@ -172,11 +193,11 @@ The requirement of this task is to predict the stems and morphological tags give
 <!-- Post -->
             <div class="blog-in"> 
               <!-- Post Detail --> 
-              <span> <a class="h4"><strong>Task 3</strong> </a> </span> <a class="h1"> <strong>Word Segmentation and Morphological Parsing</strong> </a>
+              <span> <h8><strong>Task 3</strong> </h8> </span> <h7> <strong>Word Segmentation and Morphological Parsing</strong> </h7>
 
 <div class="post-details">
               
-              <p> This task focuses on jointly solving the word segmentation and morphological tagging tasks for Sanskrit. Being a free word order language, Sanskrit is all the more lenient for poetic constructions where arranging the words to adhere to metrical constraints is a big concern. Hence, the whole input context is desirable when making each prediction of the output. Having the whole input, and deploying a joint methodology for solving these two tasks enables us to consider both the segmented form and also the morphological tags together which does make the system more efficient. <br><br>
+              <p1> This task focuses on jointly solving the word segmentation and morphological tagging tasks for Sanskrit. Being a free word order language, Sanskrit is all the more lenient for poetic constructions where arranging the words to adhere to metrical constraints is a big concern. Hence, the whole input context is desirable when making each prediction of the output. Having the whole input, and deploying a joint methodology for solving these two tasks enables us to consider both the segmented form and also the morphological tags together which does make the system more efficient. <br><br>
 
 The dependency of one task with the other is evident from the way Word Segmentation and Morphological Parsing has been dealt with in recent years. The necessity for the individual segment to be lexically and semantically valid during Word segmentation resolves the ambiguity of multiple possibilities upto a certain limit, beyond which the semantics and context of the sentence are to be taken into consideration. Also, the morphological parsing does require the segmented forms for analyses <br><br>
 
@@ -185,11 +206,13 @@ This task can be achieved in two ways: <br>
 a. As a pipeline of Task 1 and Task 2. The prediction from Word Segmentation is fed as input to the Morphological Parsing to predict the corresponding tags for each word.<br>
 b. As a joint system where the word form is considered along with all the tags for training. And both the segmented word form as well as the tags are predicted at once.<br>
 
-The participants are again provided with the parallel corpus of unsegmented-segmented sentences. And also the ground truth morphological analysis for each of those sentences. <br><br>
- </p>
+The participants are again provided with the joint and segmented sentences. And also the ground truth morphological analysis for each of those sentences will be provided. <br><br>
+ </p1>
               <blockquote>
+              <h8><strong>Related Literature:<br></strong></h8>
               <ul class="a">
-                  <li> <a href="https://aclanthology.org/2020.cl-4.4/">A Graph-Based Framework for Structured Prediction Tasks in Sanskrit</a> proposes a framework using energy-based models for multiple structured prediction tasks in Sanskrit. </li> <br>
+                  <li> Krishna, A., Santra, B., Gupta, A., Satuluri, P., & Goyal, P. (2020). A Graph-Based Framework for Structured Prediction Tasks in Sanskrit. Computational Linguistics, 46(4), 785–845. <a href="https://aclanthology.org/2020.cl-4.4">https://aclanthology.org/2020.cl-4.4</a> </li> 
+<!--                  proposes a framework using energy-based models for multiple structured prediction tasks in Sanskrit. </li> <br>-->
               </ul>
               </blockquote>
               </div>
